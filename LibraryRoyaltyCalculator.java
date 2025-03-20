@@ -1,0 +1,17 @@
+public class LibraryRoyaltyCalculator {
+    public static void main(String[] args) {
+
+        Author author = new Author("Sussi Bech");
+
+
+        author.addTitle(new PrintedBook("TE", 140, 72));
+        author.addTitle(new PrintedBook("SKØN", 50, 300));
+        author.addTitle(new AudioBook("SKØN", 10, 400));
+
+
+        double totalPay = author.calculateTotalPay();
+
+
+        System.out.printf("%s: %.2fkr%n", author.getName(), totalPay);
+    }
+}
